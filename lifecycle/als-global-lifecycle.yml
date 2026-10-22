@@ -1,0 +1,9 @@
+generated: '2026-10-21'
+method: derived
+source: openapi/als-global-webtrieve-export-openapi.yml
+versioning: Single version "v1" (Swagger info.version of Webtrieve.ExportApi); GET /Preference/Version (Preference_Version) returns the API version. No versioning policy is published.
+deprecation: No deprecation policy, Sunset/Deprecation headers or deprecated operations (none flagged in the contract).
+deprecated_operations: []
+status_page: null
+sla: null
+note: The brochure (https://edge.sitecorecloud.io/alsgroupusa347e-alsgroup8904-alsglobalpr1dd3-c9a5/media/alsglobal/resources-grid/country-landing-page-usa/als-tribology-webtrieve-web-api.pdf) says the API is "continuously improving or adding new features based on customer feedback and internal testing" and states "Data availability within 10 minutes of Laboratory sample release, via Web Portal and Web API" - a data-latency statement, not an uptime SLA.

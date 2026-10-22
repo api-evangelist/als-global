@@ -1,0 +1,31 @@
+generated: '2026-10-21'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/als-global-webtrieve-export-openapi.yml
+vocabulary:
+  name: ALS Domain Vocabulary
+  description: 'Terms declared by ALS''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions. Derived,
+    not authored.'
+  version: '2026-10-21'
+  terms:
+  - term: Preference
+    definition: 'Resource group in the contract; its operation GET /Preference/Version: Body of a Version: GET /Version'
+    tags:
+    - Resource Group
+    source: openapi/als-global-webtrieve-export-openapi.yml
+  - term: Sample
+    definition: 'Resource group in the contract; its operation POST /SampleSubmission/SampleSubmission: Body of GetCompanyExportResults: POST
+      /Sample/SampleSubmissionImport { "sampleSubmissionData": List["SampleSubmissionWebAPI"] } Response Class(Status 200) The following JSON
+      is returned if Submission is successfull: [ { "Success": "String", //"True" "Message":"string" // "Submission batch created successfully."
+      "ErrorCode":0 // 202 }, { "CompartmentUIN": "string", "FilterAge": 0, "FluidAge": 0, "C'
+    tags:
+    - Resource Group
+    source: openapi/als-global-webtrieve-export-openapi.yml
+  - term: Search
+    definition: 'Resource group in the contract; its operation POST /SampleResultsExport/SampleResults: Body of GetCompanyExportResults: POST
+      /SampleResultsExport/SampleResults { "criteria": "SampleSearchExportCriteriaExternal" } Response Class(Status 200) The following JSON is
+      returned if data is found: { "CompanyName" :"string", "CustomerNo" :"string", "UnitId" :"string", "UnitMake" :"string", "UnitModel" :"string",
+      "UnitYearOfManufacture" :"string", "CompartmentType" :"string", "CompartmentLocati'
+    tags:
+    - Resource Group
+    source: openapi/als-global-webtrieve-export-openapi.yml

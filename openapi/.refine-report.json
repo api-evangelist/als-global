@@ -1,0 +1,33 @@
+{
+  "provider": "als-global",
+  "sources": [
+    "_original/als-global-webtrieve-export-swagger.json",
+    "als-global-webtrieve-export-openapi.yml"
+  ],
+  "outputs": [
+    "als-global-preference-api-openapi.yml",
+    "als-global-sample-api-openapi.yml",
+    "als-global-search-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi/als-global-webtrieve-export-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "als-global-webtrieve-export-swagger.json: upgraded swagger 2.0 -> OpenAPI 3.2.0; renamed 4 component key(s) illegal in 3.x (e.g. FilterCriteria[DateTime])",
+    "als-global-webtrieve-export-swagger.json: declared missing tag: Preference",
+    "als-global-webtrieve-export-swagger.json: declared missing tag: Sample",
+    "als-global-webtrieve-export-swagger.json: declared missing tag: Search",
+    "als-global-webtrieve-export-openapi.yml: upgraded swagger 2.0 -> OpenAPI 3.2.0; renamed 4 component key(s) illegal in 3.x (e.g. FilterCriteria[DateTime])",
+    "als-global-webtrieve-export-openapi.yml: declared missing tag: Preference",
+    "als-global-webtrieve-export-openapi.yml: declared missing tag: Sample",
+    "als-global-webtrieve-export-openapi.yml: declared missing tag: Search",
+    "tag 'Preference' spans 2 source specs (als-global-webtrieve-export-swagger.json, als-global-webtrieve-export-openapi.yml): per-path servers applied",
+    "tag 'Sample' spans 2 source specs (als-global-webtrieve-export-swagger.json, als-global-webtrieve-export-openapi.yml): per-path servers applied",
+    "tag 'Search' spans 2 source specs (als-global-webtrieve-export-swagger.json, als-global-webtrieve-export-openapi.yml): per-path servers applied",
+    "apis.yml register: written (+3 apis, 4 total)"
+  ],
+  "skipped": []
+}

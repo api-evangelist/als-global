@@ -1,0 +1,361 @@
+openapi: 3.2.0
+info:
+  title: Als Global Sample API
+  version: v1
+  description: 'Operations tagged Sample across 2 of this provider''s published API definitions: als-global-webtrieve-export-swagger.json, als-global-webtrieve-export-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.alstribology.com
+tags:
+- name: Sample
+paths:
+  /SampleSubmission/SampleSubmission:
+    post:
+      tags:
+      - Sample
+      summary: Import Sample Submission
+      description: 'Body of GetCompanyExportResults:
+
+
+        POST /Sample/SampleSubmissionImport
+
+        {
+
+        "sampleSubmissionData": List["SampleSubmissionWebAPI"]
+
+        }
+
+
+        Response Class(Status 200)
+
+
+        The following JSON is returned if Submission is successfull:
+
+
+        [
+
+        {
+
+        "Success": "String", //"True"
+
+        "Message":"string" // "Submission batch created successfully."
+
+        "ErrorCode":0 // 202
+
+        },
+
+        {
+
+        "CompartmentUIN": "string",
+
+        "FilterAge": 0,
+
+        "FluidAge": 0,
+
+        "CompartmentAge": 0,
+
+        "UnitAge": 0,
+
+        "FilterChanged": false,
+
+        "FluidChanged": false,
+
+        "SIFNo": "string",
+
+        "WorkOrderNumber": "string",
+
+        "Comment": "string",
+
+        "ServiceType": "string",
+
+        "DateSampled": date
+
+        }
+
+        ]
+
+
+        The following JSON is returned if submission is not sucessfull:
+
+        [
+
+        {
+
+        "Success": "string", //False,
+
+        "Message": "string", //"Submission failed."
+
+        "ErrorCode": 0 //309 Error code is returned
+
+        },
+
+        {
+
+        "CompartmentUIN": "string",
+
+        "Message": "string", //Error Message
+
+        "ErrorCode":0
+
+        }
+
+        ]'
+      operationId: Sample_SampleSubmissionImport
+      responses:
+        '400':
+          description: Bad request
+        '500':
+          description: Internal Server Error
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/SampleSubmissionWebAPI'
+          text/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/SampleSubmissionWebAPI'
+          application/xml:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/SampleSubmissionWebAPI'
+          text/xml:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/SampleSubmissionWebAPI'
+          application/x-www-form-urlencoded:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/SampleSubmissionWebAPI'
+        required: true
+    servers:
+    - url: https://api.alstribology.com
+  /SampleSubmission/GetSubmissionsDetails:
+    post:
+      tags:
+      - Sample
+      summary: Get Sample Submission Details
+      description: 'Body of SampleSubmissionGetDetails:
+
+
+        POST /Sample/SampleSubmissionGetDetails
+
+        {
+
+        "criteria": "SampleSubmissionGetDetailsCriteria"
+
+        }
+
+
+        Response Class(Status 200)
+
+
+        The following JSON is returned if data is found:
+
+
+        [
+
+        {
+
+        "CompartmentUIN": "string",
+
+        "FilterAge": 0,
+
+        "FluidAge": 0,
+
+        "CompartmentAge": 0,
+
+        "UnitAge": 0,
+
+        "FilterChanged": false,
+
+        "FluidChanged": false,
+
+        "SIFNo": "string",
+
+        "WorkOrderNumber": "string",
+
+        "Comment": "string",
+
+        "ServiceType": "string",
+
+        "DateSampled": date
+
+        }
+
+        ]
+
+
+        The following JSON is returned if data is not found:
+
+
+        {
+
+        "Success" : false,
+
+        "Message" : "string",
+
+        "ErrorCode" : 0, //306 Error Code is returned
+
+        "APIVersion": "string"
+
+        }'
+      operationId: Sample_SampleSubmissionGetDetails
+      responses:
+        '400':
+          description: Bad request
+        '500':
+          description: Internal Server Error
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SampleSubmissionGetDetailsCriteria'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/SampleSubmissionGetDetailsCriteria'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/SampleSubmissionGetDetailsCriteria'
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/SampleSubmissionGetDetailsCriteria'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SampleSubmissionGetDetailsCriteria'
+        required: true
+    servers:
+    - url: https://api.alstribology.com
+  /SampleSubmission/GetPrintLabels:
+    post:
+      tags:
+      - Sample
+      summary: Get Sample Submission Print Labels
+      description: 'Body of SampleSubmissionGetPrintLabels:
+
+
+        POST /Sample/SampleSubmissionGetPrintLabels
+
+        {
+
+        "sampleSubmissionPrintLabelsCriteria": "SampleSubmissionGetPrintLabelsCriteria"
+
+        }
+
+
+        Response Class(Status 200)
+
+
+        The Html file with print labels is returned if data is found:
+
+
+        The Html file with below message is returned if data is not found:
+
+        {
+
+        "Message" : "string",
+
+        "ErrorCode" : 0, //306 Error Code is returned
+
+        }'
+      operationId: Sample_SampleSubmissionGetPrintLabels
+      responses:
+        '400':
+          description: Bad request
+        '500':
+          description: Internal Server Error
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SampleSubmissionGetPrintLabelsCriteria'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/SampleSubmissionGetPrintLabelsCriteria'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/SampleSubmissionGetPrintLabelsCriteria'
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/SampleSubmissionGetPrintLabelsCriteria'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/SampleSubmissionGetPrintLabelsCriteria'
+        required: true
+    servers:
+    - url: https://api.alstribology.com
+components:
+  schemas:
+    SampleSubmissionGetPrintLabelsCriteria:
+      type: object
+      properties:
+        SIFNo:
+          type: array
+          items:
+            type: string
+        PrintLabel:
+          type: string
+    SampleSubmissionGetDetailsCriteria:
+      type: object
+      properties:
+        SIFNo:
+          type: array
+          items:
+            type: string
+        OutStandingSubmissionFor:
+          format: int32
+          type: integer
+    SampleSubmissionWebAPI:
+      type: object
+      properties:
+        CompartmentUIN:
+          type: string
+        FilterAge:
+          format: int64
+          type: integer
+        FluidAge:
+          format: int64
+          type: integer
+        CompartmentAge:
+          format: int64
+          type: integer
+        UnitAge:
+          format: int64
+          type: integer
+        FilterChanged:
+          type: boolean
+        FluidChanged:
+          type: boolean
+        SIFNo:
+          type: string
+        WorkOrderNumber:
+          type: string
+        Comment:
+          type: string
+        ServiceType:
+          type: string
+        UserId:
+          format: int32
+          type: integer
+        DateSampled:
+          format: date-time
+          type: string
+        LodgedDate:
+          format: date-time
+          type: string
+        PrintedDate:
+          format: date-time
+          type: string
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic
+      description: Basic HTTP Authentication
+x-refined-from:
+- als-global-webtrieve-export-swagger.json
+- als-global-webtrieve-export-openapi.yml

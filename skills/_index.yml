@@ -1,0 +1,13 @@
+name: ALS agent skills
+generated: '2026-10-21'
+method: generated
+source: Packaged Agent Skills generated from openapi/als-global-webtrieve-export-openapi.yml. No provider-published skills or AGENTS.md were found.
+skills:
+- file: als-global-submit-oil-samples.md
+  name: submit-oil-samples
+  api: openapi/als-global-webtrieve-export-openapi.yml
+  operations: [Sample_SampleSubmissionImport, Sample_SampleSubmissionGetDetails, Sample_SampleSubmissionGetPrintLabels]
+- file: als-global-export-sample-results.md
+  name: export-sample-results
+  api: openapi/als-global-webtrieve-export-openapi.yml
+  operations: [Preference_Version, Search_GetSampleSyncTime, Search_GetSampleExportResultsExposed]

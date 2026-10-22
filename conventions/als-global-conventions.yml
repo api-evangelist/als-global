@@ -1,0 +1,36 @@
+generated: '2026-10-21'
+method: searched
+source: https://edge.sitecorecloud.io/alsgroupusa347e-alsgroup8904-alsglobalpr1dd3-c9a5/media/alsglobal/resources-grid/country-landing-page-usa/als-tribology-webtrieve-web-api.pdf
+sources:
+- https://edge.sitecorecloud.io/alsgroupusa347e-alsgroup8904-alsglobalpr1dd3-c9a5/media/alsglobal/resources-grid/country-landing-page-usa/als-tribology-webtrieve-web-api.pdf
+- https://www.alsglobal.com/global-integration-platform
+- openapi/als-global-webtrieve-export-openapi.yml
+auth:
+  style: HTTP Basic (securityDefinitions basic in the Webtrieve.ExportApi Swagger 2.0 contract)
+  docs: authentication/als-global-authentication.yml
+  note: Global Integration Platform credentials and endpoints are issued by ALS client support on activation; scheme not published.
+format:
+  response: JSON ("Results returned by the Web API contain all sample data available for a specific sample in JSON format")
+idempotency:
+  coverage: none
+  note: No idempotency key or replay protection is declared in the contract or described in the brochure; the write operations (Sample_SampleSubmissionImport and the POST query operations) carry no such header.
+pagination:
+  style: none documented
+  note: Brochure states up to 10,000 records (rows) per Web API call; the export filters on lastUpdateDate and Search_GetSampleSyncTime supports incremental sync ("New sample data since last database refresh").
+filtering:
+  style: criteria.<field>.value / valueCollection / operator query parameters on Search_GetSampleExportResultsExposed (dateSampled, sIFNo, uIN, lastUpdateDate, severityId, dateDiagnosed, brand, trackingNumber) plus criteria.columnsRequired for sparse fields
+versioning:
+  scheme: single version v1 (info.version), exposed by Preference_Version (GET /Preference/Version)
+  docs: lifecycle/als-global-lifecycle.yml
+errors:
+  note: '"If an error occurs, user are returned an error or status code that can be found within the Web API specification documentation." The contract declares 400 and 500 responses on every operation.'
+rate_limit_signaling:
+  note: No headers documented; see rate-limits/als-global-rate-limits.yml
+request_id: none documented
+reversibility:
+  status: none
+  surfaces:
+  - surface: sample submission (Sample_SampleSubmissionImport)
+    reversal_operation: null
+    window: null
+    note: The contract has no cancel/delete/void operation for a submitted sample, and no reversal window is documented.

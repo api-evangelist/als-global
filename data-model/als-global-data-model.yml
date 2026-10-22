@@ -1,0 +1,62 @@
+generated: '2026-10-21'
+method: derived
+generator: derive-data-model.py
+source:
+- openapi/als-global-webtrieve-export-openapi.yml
+notation: has_one = property $ref; has_many = array of $ref; belongs_to = <entity>_id field
+summary:
+  entities: 9
+  entities_in_spec: 9
+  relationships: 8
+entities:
+- name: FilterCriteria[DateTime]
+  fields: 3
+- name: FilterCriteria[Int32]
+  fields: 3
+- name: FilterCriteria[String]
+  fields: 3
+- name: HtmlActionResult[ViewModelOutstandingSampleSubmissionPrintLabelInfo]
+  fields: 0
+- name: SampleSearchExportCriteriaExternal
+  fields: 9
+- name: SampleSubmissionGetDetailsCriteria
+  fields: 2
+- name: SampleSubmissionGetPrintLabelsCriteria
+  fields: 2
+- name: SampleSubmissionWebAPI
+  fields: 15
+- name: Version
+  fields: 1
+relationships:
+- from: SampleSearchExportCriteriaExternal
+  to: FilterCriteria[DateTime]
+  type: has_one
+  via: DateSampled
+- from: SampleSearchExportCriteriaExternal
+  to: FilterCriteria[String]
+  type: has_one
+  via: SIFNo
+- from: SampleSearchExportCriteriaExternal
+  to: FilterCriteria[String]
+  type: has_one
+  via: UIN
+- from: SampleSearchExportCriteriaExternal
+  to: FilterCriteria[DateTime]
+  type: has_one
+  via: LastUpdateDate
+- from: SampleSearchExportCriteriaExternal
+  to: FilterCriteria[Int32]
+  type: has_one
+  via: SeverityId
+- from: SampleSearchExportCriteriaExternal
+  to: FilterCriteria[DateTime]
+  type: has_one
+  via: DateDiagnosed
+- from: SampleSearchExportCriteriaExternal
+  to: FilterCriteria[String]
+  type: has_one
+  via: Brand
+- from: SampleSearchExportCriteriaExternal
+  to: FilterCriteria[String]
+  type: has_one
+  via: TrackingNumber

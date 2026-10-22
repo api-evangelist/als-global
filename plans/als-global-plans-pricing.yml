@@ -1,0 +1,12 @@
+name: ALS pricing
+generated: '2026-10-21'
+method: searched
+source: https://www.alsglobal.com/global-integration-platform
+audience: unclear
+pricing_basis: none
+published: false
+plan_count: 0
+plans: []
+delivery:
+  delivery: managed
+note: No API pricing or plans are published. The Global Integration Platform is activated for existing ALS clients through their local ALS client support team ("Talk to your local ALS client support team"); the Webtrieve Web API brochure (https://edge.sitecorecloud.io/alsgroupusa347e-alsgroup8904-alsglobalpr1dd3-c9a5/media/alsglobal/resources-grid/country-landing-page-usa/als-tribology-webtrieve-web-api.pdf) likewise lists no price, only a contact (reliability@alsglobal.com).

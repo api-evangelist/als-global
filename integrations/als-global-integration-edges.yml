@@ -1,0 +1,27 @@
+generated: '2026-10-21'
+method: none
+source:
+- https://www.alsglobal.com/global-integration-platform
+- https://zapier.com/apps/als-global/integrations
+- https://zapier.com/apps/als/integrations
+- https://n8n.io/integrations/als-global/
+- https://composio.dev/toolkits/als-global
+- https://monid.ai/tools/als-global
+checked:
+- https://www.alsglobal.com/global-integration-platform
+- https://edge.sitecorecloud.io/alsgroupusa347e-alsgroup8904-alsglobalpr1dd3-c9a5/media/alsglobal/resources-grid/country-landing-page-usa/als-tribology-webtrieve-web-api.pdf
+- openapi/als-global-webtrieve-export-openapi.yml
+- https://zapier.com/apps/als/integrations
+- https://www.make.com/en/integrations/als
+- https://n8n.io/integrations/als/
+- https://composio.dev/toolkits/als-global
+- https://monid.ai/tools/als-global
+- https://n8n.io/integrations/als-global/
+- https://zapier.com/apps/als-global/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
+note: Probe statuses - zapier 404, make.com 403 (unreadable), n8n 404. No named partner integrations. The brochure
+  names generic categories (EAM, CMMS, LIMS, Excel, Power BI as targets for downloaded data) as use cases, not partner
+  integrations; the contract names no third-party service.

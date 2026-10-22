@@ -1,23 +1,191 @@
 aid: als-global
+
 name: ALS
-description: 'ALS is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'ALS (ALS Limited, alsglobal.com) is a global provider of laboratory testing, inspection, certification
+  and verification solutions, serving environmental, equipment reliability (oil and tribology), food and agrisciences,
+  mining and commodities (geochemistry), beauty and personal care, and pharmaceutical and healthcare clients. It
+  operates client data portals such as ALS Solutions and Webtrieve, and its Global Integration Platform adds a
+  credential-gated API layer to an ALS Solutions account so client registration, LIMS and reporting systems can exchange
+  sample registrations, results and certificates; endpoint documentation is provided by client support on activation.'
+
 url: https://raw.githubusercontent.com/api-evangelist/als-global/refs/heads/main/apis.yml
+
+image: https://edge.sitecorecloud.io/alsgroupusa347e-alsgroup8904-alsglobalpr1dd3-c9a5/media/alsglobal/header/logo.png
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+- Laboratory Testing
+- Environmental Testing
+- Inspection
+- Certification
+- Geochemistry
+- Food Testing
+- LIMS Integration
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: AgenticAccess
+  url: agentic-access/als-global-agentic-access.yml
+- type: RateLimits
+  url: rate-limits/als-global-rate-limits.yml
+- type: Spectral
+  url: rules/als-global-rules.yml
+- type: Vocabulary
+  url: vocabulary/als-global-vocabulary.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DataModel
+  url: data-model/als-global-data-model.yml
+- type: Conventions
+  url: conventions/als-global-conventions.yml
+- type: Lifecycle
+  url: lifecycle/als-global-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/als-global-problem-types.yml
+- type: Conformance
+  url: conformance/als-global-conformance.yml
+- type: Overlay
+  url: overlays/als-global-webtrieve-export-overlay.yaml
+- type: LLMsTxt
+  url: llms/als-global-llms.txt
+- type: Hosts
+  url: hosts/als-global-hosts.yml
+- type: Vendors
+  url: vendors/als-global-vendors.yml
+- type: Authentication
+  url: authentication/als-global-authentication.yml
+- type: DomainSecurity
+  url: security/als-global-domain-security.yml
 - type: Website
-  url: https://alsglobal.com/
+  url: https://www.alsglobal.com/
+- type: Documentation
+  name: Global Integration Platform
+  url: https://www.alsglobal.com/global-integration-platform
+- type: SignUp
+  name: Request API Access (Activate Global Integration Platform)
+  url: https://www.alsglobal.com/portal---activate-global-integration
+- type: Login
+  name: ALS Solutions client portal
+  url: https://solutions.alsglobal.com/
+- type: Portal
+  name: All client portals
+  url: https://www.alsglobal.com/all-client-portals
+- type: Support
+  url: https://www.alsglobal.com/contact-us
+- type: About
+  url: https://www.alsglobal.com/about
+- type: Blog
+  name: Food Insights Blog
+  url: https://www.alsglobal.com/food-insights-blog
+- type: Newsroom
+  url: https://www.alsglobal.com/news-and-media-global
+- type: InvestorRelations
+  url: https://www.alsglobal.com/investor-relations
+- type: Careers
+  url: https://www.alsglobal.com/careers
+- type: TermsOfService
+  url: https://www.alsglobal.com/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.alsglobal.com/privacy-policy
+- type: LinkedIn
+  url: https://www.linkedin.com/company/als
+- type: YouTube
+  url: https://www.youtube.com/channel/UC9GTzaPtpqJYG7Gzdc7bygw
+
+apis:
+- aid: als-global:global-integration-platform
+  name: ALS Global Integration Platform
+  description: >-
+    API layer from ALS Solutions that lets existing clients connect registration, LIMS and reporting systems
+    to ALS to send sample registration data, retrieve results automatically and download certificates
+    and reports in bulk; client support issues credentials and endpoints on activation, and no public
+    reference or contract is published.
+  humanURL: https://www.alsglobal.com/global-integration-platform
+  tags:
+  - LIMS Integration
+  - Sample Registration
+  properties:
+  - type: Documentation
+    url: https://www.alsglobal.com/global-integration-platform
+  - type: SignUp
+    url: https://www.alsglobal.com/portal---activate-global-integration
+- aid: als-global:als-global-preference-api
+  name: ALS Preference API
+  description: The Preference API from ALS — 1 operation(s) for preference.
+  humanURL: https://api.alstribology.com/swagger/ui/index
+  baseURL: https://api.alstribology.com
+  tags:
+  - Preference
+  properties:
+  - type: OpenAPI
+    url: openapi/als-global-preference-api-openapi.yml
+  - type: Documentation
+    url: https://api.alstribology.com/swagger/ui/index
+  - type: Documentation
+    url: >-
+      https://edge.sitecorecloud.io/alsgroupusa347e-alsgroup8904-alsglobalpr1dd3-c9a5/media/alsglobal/resources-grid/country-landing-page-usa/als-tribology-webtrieve-web-api.pdf
+- aid: als-global:als-global-sample-api
+  name: ALS Sample API
+  description: The Sample API from ALS — 3 operation(s) for sample.
+  humanURL: https://api.alstribology.com/swagger/ui/index
+  baseURL: https://api.alstribology.com
+  tags:
+  - Sample
+  properties:
+  - type: OpenAPI
+    url: openapi/als-global-sample-api-openapi.yml
+  - type: Documentation
+    url: https://api.alstribology.com/swagger/ui/index
+  - type: Documentation
+    url: >-
+      https://edge.sitecorecloud.io/alsgroupusa347e-alsgroup8904-alsglobalpr1dd3-c9a5/media/alsglobal/resources-grid/country-landing-page-usa/als-tribology-webtrieve-web-api.pdf
+- aid: als-global:als-global-search-api
+  name: ALS Search API
+  description: The Search API from ALS — 2 operation(s) for search.
+  humanURL: https://api.alstribology.com/swagger/ui/index
+  baseURL: https://api.alstribology.com
+  tags:
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/als-global-search-api-openapi.yml
+  - type: Documentation
+    url: https://api.alstribology.com/swagger/ui/index
+  - type: Documentation
+    url: >-
+      https://edge.sitecorecloud.io/alsgroupusa347e-alsgroup8904-alsglobalpr1dd3-c9a5/media/alsglobal/resources-grid/country-landing-page-usa/als-tribology-webtrieve-web-api.pdf
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Website and pointers read from www.alsglobal.com (nav/footer and client-portals page). API is gated; activation page states endpoint documentation is supplied on request, no public reference found.
+  evidence:
+  - {url: 'https://www.alsglobal.com/', status: 200}
+  - {url: 'https://www.alsglobal.com/portal---activate-global-integration', status: 200}
+  - {url: 'https://www.alsglobal.com/global-integration-platform', status: 200}
+  - {url: 'https://solutions.alsglobal.com/', status: 200}
+  - {url: 'https://www.alsglobal.com/all-client-portals', status: 200}
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 28
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

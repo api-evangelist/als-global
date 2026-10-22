@@ -1,0 +1,57 @@
+openapi: 3.2.0
+info:
+  title: Als Global Preference API
+  version: v1
+  description: 'Operations tagged Preference across 2 of this provider''s published API definitions: als-global-webtrieve-export-swagger.json, als-global-webtrieve-export-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.alstribology.com
+tags:
+- name: Preference
+paths:
+  /Preference/Version:
+    get:
+      tags:
+      - Preference
+      summary: Get Version of the Web-API
+      description: 'Body of a Version:
+
+
+        GET /Version'
+      operationId: Preference_Version
+      responses:
+        '200':
+          description: The following JSON is returned.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Version'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Version'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Version'
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/Version'
+        '400':
+          description: Bad request
+        '500':
+          description: Internal Server Error
+    servers:
+    - url: https://api.alstribology.com
+components:
+  schemas:
+    Version:
+      type: object
+      properties:
+        APIVersion:
+          type: string
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic
+      description: Basic HTTP Authentication
+x-refined-from:
+- als-global-webtrieve-export-swagger.json
+- als-global-webtrieve-export-openapi.yml

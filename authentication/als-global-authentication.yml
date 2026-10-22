@@ -1,0 +1,22 @@
+generated: '2026-10-21'
+method: searched
+source: openapi/als-global-webtrieve-export-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: basic
+  type: http
+  scheme: basic
+  description: Basic HTTP Authentication
+  sources:
+  - openapi/als-global-webtrieve-export-openapi.yml
+docs: https://www.alsglobal.com/global-integration-platform
+sources:
+- openapi/als-global-webtrieve-export-openapi.yml
+- https://www.alsglobal.com/global-integration-platform
+note: 'Webtrieve Export API uses HTTP Basic per its contract; the brochure adds "SSL
+  encryption determined by Webtrieve 9 user account-specific encryption key." Global
+  Integration Platform: "Your ALS client support team confirms your account and scope,
+  then issues API credentials." and "Connections use authenticated, encrypted API
+  access scoped to your account only." The credential type is not published.'

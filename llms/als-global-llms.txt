@@ -1,0 +1,16 @@
+# Basic Next.js Starter (Pages Router)
+
+> A simple Next.js Pages Router starter with basic Sitecore XM Cloud integration for headless content delivery.
+
+This site demonstrates core XM Cloud patterns with the Pages Router: dynamic routing, layout data, and content-driven components. Built with the Sitecore Content SDK.
+
+## Key pages
+
+- [Home](https://www.alsglobal.com/): Main landing page and site overview
+
+## Optional
+
+- [Sitemap](https://www.alsglobal.com/sitemap.xml): Full XML sitemap for search engines
+- [LLM Sitemap](https://www.alsglobal.com/sitemap-llm.xml): LLM-optimized sitemap for AI crawlers
+- [Robots](https://www.alsglobal.com/robots.txt): Crawler and bot access rules
+- [AI metadata](https://www.alsglobal.com/.well-known/ai.txt): AI crawler and LLM metadata (ai.txt)

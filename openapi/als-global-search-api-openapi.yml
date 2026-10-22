@@ -1,0 +1,581 @@
+openapi: 3.2.0
+info:
+  title: Als Global Search API
+  version: v1
+  description: 'Operations tagged Search across 2 of this provider''s published API definitions: als-global-webtrieve-export-swagger.json, als-global-webtrieve-export-openapi.yml. Each path carries the servers of the definition it was published in.'
+servers:
+- url: https://api.alstribology.com
+tags:
+- name: Search
+paths:
+  /SampleResultsExport/SampleResults:
+    post:
+      tags:
+      - Search
+      summary: Get Sample Results
+      description: 'Body of GetCompanyExportResults:
+
+
+        POST /SampleResultsExport/SampleResults
+
+        {
+
+        "criteria": "SampleSearchExportCriteriaExternal"
+
+        }
+
+
+        Response Class(Status 200)
+
+
+        The following JSON is returned if data is found:
+
+
+        {
+
+        "CompanyName" :"string",
+
+        "CustomerNo" :"string",
+
+        "UnitId" :"string",
+
+        "UnitMake" :"string",
+
+        "UnitModel" :"string",
+
+        "UnitYearOfManufacture" :"string",
+
+        "CompartmentType" :"string",
+
+        "CompartmentLocation" :"string",
+
+        "CompartmentUIN" :"string",
+
+        "CompartmentName" :"string",
+
+        "CompartmentMake" :"string",
+
+        "CompartmentModel" :"string",
+
+        "CompanyPhoneNumber" :"string",
+
+        "CompanyAddress" :"string",
+
+        "CompanyPostalAddress" :"string",
+
+        "CompanyCountry" :"string",
+
+        "BrandAccountNo" :"string",
+
+        "CompartmentCapacityUOM" :"string",
+
+        "UnitSite" :"string",
+
+        "CompanyCity" :"string",
+
+        "CompanyState" :"string",
+
+        "CompanyPostalCode" :"string",
+
+        "CompartmentSerialNo" :"string",
+
+        "CompanyEmailAddress" :"string",
+
+        "UnitAgeUOM" :"string",
+
+        "CompartmentSamplePointId" :"string", ",
+
+        "ViscosityClass" :"string",
+
+        "CompartmentCategory" :"string",
+
+        "SIFNo" :"string",
+
+        "LabNo" :"string",
+
+        "Severity" :"string",
+
+        "UnitLastModifiedBy" :"string",
+
+        "CompartmentLastModifiedBy" :"string",
+
+        "CompartmentAgeUOM" :"string",
+
+        "CompartmentDefaultFluid" :"string",
+
+        "CompartmentFluidGrade" :"string",
+
+        "CompartmentFluidManufacturer":"string",
+
+        "UnitOperation" :"string",
+
+        "UnitSector" :"string",
+
+        "CompartmentCapacity" : 0,
+
+        "UnitLastModified" :"string",
+
+        "CompartmentLastModified" :"string",
+
+        "UnitAge" : 0,
+
+        "SampleFilterAge" : 0,
+
+        "CompartmentAge" : 0,
+
+        "UnitSerialNo" :"string",
+
+        "SampleFluidAge" :"string",
+
+        "FluidConsumption" : Decimal,
+
+        "ProblemCode" :"string",
+
+        "DateSampled" :"string",
+
+        "DateReceived" :"string",
+
+        "DateDiagnosed" :"string",
+
+        "LastUpdateDate" :"string",
+
+        "Brand" :"string",
+
+        "SampleFluid" :"string",
+
+        "SampleFluidGrade" :"string",
+
+        "SampleFluidManufacturer" :"string",
+
+        "SampleWorkOrderNo" :"string",
+
+        "SampleFluidChanged" : false,
+
+        "SampleFilterChanged" : false,
+
+        "Diagnosis" :"string",
+
+        "SampleSubmittedById" :"string",
+
+        "SampleSubmittedByName" :"string",
+
+        "SampleSubmissionComments" :"string",
+
+        "FeedbackDescription" :"string",
+
+        "FeedbackJobStatus" :"string",
+
+        "FeedbackNotificationNo" :"string",
+
+        "FeedbackDateNotificationRaised":"string",
+
+        "FeedbackWorkOrderNo" :"string",
+
+        "FeedbackDateWorkOrderRaised" :"string",
+
+        "FeedbackDateJobClosed" :"string",
+
+        "FeedbackMeterReading" : 0,
+
+        "FeedbackBy" :"string",
+
+        "ServiceType" : "",
+
+        "SampleReportURL" :"string",
+
+        "ImageURL" :"string",
+
+        "xWater" :"string", //Sample Test Code,this column name is dynamic, it changes based on the criteria and also result may return many Test Code eg {"xCu": "7", "xPb": "1"}
+
+        "xWater_Sev" :"string" //Sample Test Severity,this column name is dynamic, it changes based on the criteria and also result may return many Test Severity eg {"xCu_Sev": "Normal","xPb_Sev": "Normal"}
+
+        }
+
+
+        Note: Sample Test Codes
+
+
+        Test Code Severity : Every Test Code has test severity pair, where a "Test Code" suffixed with "_Sev" returns the test code severity result.
+
+
+        For example, the test code "xK" has a test code severity pair of "xK_Sev"
+
+
+        {
+
+        "xK" : "5",
+
+        "xK_Sev" : "Normal"
+
+        }
+
+
+        The following JSON is returned if data is not found:
+
+
+        {
+
+        "Success" : false,
+
+        "Message" : "string",
+
+        "ErrorCode" : 0, //306 Error Code is returned
+
+        "APIVersion": "string"
+
+        }'
+      operationId: Search_GetSampleExportResultsExposed
+      parameters:
+      - name: criteria.dateSampled.value
+        in: query
+        required: false
+        schema:
+          type: string
+          format: date-time
+      - name: criteria.dateSampled.valueCollection
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: array
+          items:
+            type: string
+            format: date-time
+      - name: criteria.dateSampled.operator
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+          enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+          - 10
+          - 11
+          - 12
+      - name: criteria.sIFNo.value
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: criteria.sIFNo.valueCollection
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: array
+          items:
+            type: string
+      - name: criteria.sIFNo.operator
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+          enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+          - 10
+          - 11
+          - 12
+      - name: criteria.uIN.value
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: criteria.uIN.valueCollection
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: array
+          items:
+            type: string
+      - name: criteria.uIN.operator
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+          enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+          - 10
+          - 11
+          - 12
+      - name: criteria.lastUpdateDate.value
+        in: query
+        required: false
+        schema:
+          type: string
+          format: date-time
+      - name: criteria.lastUpdateDate.valueCollection
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: array
+          items:
+            type: string
+            format: date-time
+      - name: criteria.lastUpdateDate.operator
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+          enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+          - 10
+          - 11
+          - 12
+      - name: criteria.severityId.value
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+      - name: criteria.severityId.valueCollection
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: array
+          items:
+            type: integer
+            format: int32
+      - name: criteria.severityId.operator
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+          enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+          - 10
+          - 11
+          - 12
+      - name: criteria.columnsRequired
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: array
+          items:
+            type: string
+      - name: criteria.dateDiagnosed.value
+        in: query
+        required: false
+        schema:
+          type: string
+          format: date-time
+      - name: criteria.dateDiagnosed.valueCollection
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: array
+          items:
+            type: string
+            format: date-time
+      - name: criteria.dateDiagnosed.operator
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+          enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+          - 10
+          - 11
+          - 12
+      - name: criteria.brand.value
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: criteria.brand.valueCollection
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: array
+          items:
+            type: string
+      - name: criteria.brand.operator
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+          enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+          - 10
+          - 11
+          - 12
+      - name: criteria.trackingNumber.value
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: criteria.trackingNumber.valueCollection
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: array
+          items:
+            type: string
+      - name: criteria.trackingNumber.operator
+        in: query
+        required: false
+        schema:
+          type: integer
+          format: int32
+          enum:
+          - 0
+          - 1
+          - 2
+          - 3
+          - 4
+          - 5
+          - 6
+          - 7
+          - 8
+          - 9
+          - 10
+          - 11
+          - 12
+      responses:
+        '400':
+          description: Bad request
+        '500':
+          description: Internal Server Error
+    servers:
+    - url: https://api.alstribology.com
+  /SampleResultsExport/GetSyncTime:
+    get:
+      tags:
+      - Search
+      summary: Get Sample Sync Time
+      description: 'Body of GetSampleSyncTime:
+
+
+        Get /Search/GetSampleSyncTime
+
+
+        Response Class(Status 200)
+
+
+        The following JSON is returned if data is found:
+
+
+        {
+
+        "CurrentJobStatus": "string",
+
+        "LastRunCompleted": Datetime
+
+        }
+
+
+        The following JSON is returned if data is not found:
+
+
+        {
+
+        "Success" : false,
+
+        "Message" : "string",
+
+        "ErrorCode" : 0, //306 Error Code is returned
+
+        "APIVersion": "string"
+
+        }'
+      operationId: Search_GetSampleSyncTime
+      responses:
+        '400':
+          description: Bad request
+        '500':
+          description: Internal Server Error
+    servers:
+    - url: https://api.alstribology.com
+components:
+  securitySchemes:
+    basic:
+      type: http
+      scheme: basic
+      description: Basic HTTP Authentication
+x-refined-from:
+- als-global-webtrieve-export-swagger.json
+- als-global-webtrieve-export-openapi.yml

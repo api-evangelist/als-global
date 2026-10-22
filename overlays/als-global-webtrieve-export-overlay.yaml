@@ -1,0 +1,51 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist overlay for ALS Tribology Webtrieve Export API
+  version: 1.0.0
+extends: ../openapi/_original/als-global-webtrieve-export-openapi.yml
+x-generated: '2026-10-21'
+x-method: generated
+x-source: openapi/als-global-webtrieve-export-openapi.yml
+x-rationale: >-
+  The captured Swagger 2.0 contract defines securityDefinitions.basic but applies it
+  nowhere (no root or per-operation security), and its operations carry no tags. This
+  overlay adds the root Basic-auth requirement, groups operations by tag and flags the
+  one write operation, WITHOUT mutating the original.
+actions:
+- target: $
+  description: Apply the declared HTTP Basic scheme to every operation.
+  update:
+    security:
+    - basic: []
+    tags:
+    - name: Preference
+      description: API metadata.
+    - name: Sample Submission
+      description: Submit oil-analysis samples, read submission details and print labels.
+    - name: Sample Results Export
+      description: Export sample results and sync time.
+- target: $.paths['/Preference/Version'].get
+  update:
+    tags: [Preference]
+    x-agent-safe: true
+- target: $.paths['/SampleSubmission/SampleSubmission'].post
+  update:
+    tags: [Sample Submission]
+    x-agent-safe: false
+    x-agent-note: Creates sample submissions at ALS; confirm with a human before calling.
+- target: $.paths['/SampleSubmission/GetSubmissionsDetails'].post
+  update:
+    tags: [Sample Submission]
+    x-agent-safe: true
+- target: $.paths['/SampleSubmission/GetPrintLabels'].post
+  update:
+    tags: [Sample Submission]
+    x-agent-safe: true
+- target: $.paths['/SampleResultsExport/SampleResults'].post
+  update:
+    tags: [Sample Results Export]
+    x-agent-safe: true
+- target: $.paths['/SampleResultsExport/GetSyncTime'].get
+  update:
+    tags: [Sample Results Export]
+    x-agent-safe: true

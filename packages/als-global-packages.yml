@@ -1,0 +1,5 @@
+generated: '2026-10-21'
+method: none
+source: https://edge.sitecorecloud.io/alsgroupusa347e-alsgroup8904-alsglobalpr1dd3-c9a5/media/alsglobal/resources-grid/country-landing-page-usa/als-tribology-webtrieve-web-api.pdf
+packages: []
+note: No first-party SDK, client library or CLI is named in the Webtrieve Web API brochure, the Swagger UI site, or the Global Integration Platform page; integration is by direct HTTP against the documented API.

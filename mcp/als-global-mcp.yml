@@ -1,0 +1,56 @@
+generated: '2026-10-21'
+method: derived
+status: candidate
+name: ALS Tribology Webtrieve Export API (candidate MCP tools)
+source: openapi/als-global-webtrieve-export-openapi.yml
+description: >-
+  No official ALS MCP server was found. Checked 2026-10-21: GET
+  https://api.alstribology.com/.well-known/mcp.json -> 404 and
+  /.well-known/mcp/server-card.json -> 404; pre-flight contract discovery on
+  alsglobal.com, www.alsglobal.com, solutions.alsglobal.com and api.alsglobal.com
+  reported mcp absent; a web search for an ALS / Webtrieve MCP server returned nothing
+  relevant. The tools below are a CANDIDATE list derived one-to-one from the six
+  operations in the captured Swagger 2.0 contract (Webtrieve.ExportApi v1). Nobody
+  ships this server.
+deployment:
+  mode: none
+  auth: unknown
+  verified: derived
+  note: Underlying REST API uses HTTP Basic authentication (securityDefinitions.basic) on https://api.alstribology.com.
+tools:
+- name: get_api_version
+  operationId: Preference_Version
+  method: GET
+  path: /Preference/Version
+  description: Get Version of the Web-API.
+  readOnly: true
+- name: import_sample_submission
+  operationId: Sample_SampleSubmissionImport
+  method: POST
+  path: /SampleSubmission/SampleSubmission
+  description: Import Sample Submission (body parameter sampleSubmissionData).
+  readOnly: false
+- name: get_submission_details
+  operationId: Sample_SampleSubmissionGetDetails
+  method: POST
+  path: /SampleSubmission/GetSubmissionsDetails
+  description: Get Sample Submission Details (body parameter sampleSubmissionGetDetailsCriteria).
+  readOnly: true
+- name: get_print_labels
+  operationId: Sample_SampleSubmissionGetPrintLabels
+  method: POST
+  path: /SampleSubmission/GetPrintLabels
+  description: Get Sample Submission Print Labels (body parameter sampleSubmissionPrintLabelsCriteria).
+  readOnly: true
+- name: get_sample_results
+  operationId: Search_GetSampleExportResultsExposed
+  method: POST
+  path: /SampleResultsExport/SampleResults
+  description: Get Sample Results, filtered by criteria.* query parameters (dateSampled, sIFNo, uIN, lastUpdateDate, severityId, dateDiagnosed, brand, trackingNumber, columnsRequired).
+  readOnly: true
+- name: get_sample_sync_time
+  operationId: Search_GetSampleSyncTime
+  method: GET
+  path: /SampleResultsExport/GetSyncTime
+  description: Get Sample Sync Time.
+  readOnly: true
