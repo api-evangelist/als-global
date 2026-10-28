@@ -64,5 +64,123 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-ALS is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026) and added to the network as a stub for full-pipeline profiling.
-- https://alsglobal.com/
+ALS (ALS Limited, alsglobal.com) is a global provider of laboratory testing, inspection, certification and verification solutions, serving environmental, equipment reliability (oil and tribology), food and agrisciences, mining and commodities (geochemistry), beauty and personal care, and pharmaceutical and healthcare clients. It operates client data portals such as ALS Solutions and Webtrieve, and its Global Integration Platform adds a credential-gated API layer to an ALS Solutions account so client registration, LIMS and reporting systems can exchange sample registrations, results and certificates; endpoint documentation is provided by client support on activation.
+
+**Areas:** Company · Laboratory Testing · Environmental Testing · Inspection · Certification · Geochemistry · Food Testing · LIMS Integration
+
+## ALS on APIs.io
+
+Everything profiled for ALS is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/als-global/](https://apis.io/providers/als-global/)** — or go straight to one of the APIs or properties below.
+
+### APIs (4)
+
+- [ALS Global Integration Platform](https://apis.io/apis/als-global/global-integration-platform/) — API layer from ALS Solutions that lets existing clients connect registration, LIMS and reporting systems to ALS to send sample registration data, retrieve…
+- [ALS Preference API](https://apis.io/apis/als-global/als-global-preference-api/) — The Preference API from ALS — 1 operation(s) for preference.
+- [ALS Sample API](https://apis.io/apis/als-global/als-global-sample-api/) — The Sample API from ALS — 3 operation(s) for sample.
+- [ALS Search API](https://apis.io/apis/als-global/als-global-search-api/) — The Search API from ALS — 2 operation(s) for search.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Als Global Agentic Access](https://apis.io/agentic-access/als-global/als-global-agentic-access/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Als Global Webtrieve Export Overlay](https://apis.io/overlays/als-global/als-global-webtrieve-export-overlay/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [ALS API Rules](https://apis.io/rules/als-global/als-global-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Als Global Authentication](https://apis.io/security/als-global/als-global-authentication/)
+- [Als Global Domain Security](https://apis.io/security/als-global/als-global-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Als Global Plans Pricing](https://apis.io/plans/als-global/als-global-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Als Global Rate Limits](https://apis.io/rate-limits/als-global/als-global-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.alsglobal.com/)
+- [Documentation](https://www.alsglobal.com/global-integration-platform)
+- [Sign up](https://www.alsglobal.com/portal---activate-global-integration)
+- [Support](https://www.alsglobal.com/contact-us)
+- [Blog](https://www.alsglobal.com/food-insights-blog)
+- [Terms of service](https://www.alsglobal.com/terms-and-conditions)
+- [Privacy policy](https://www.alsglobal.com/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 44.7** — developing · rubric 0.24.0 · scored 2026-10-21
+
+| Facet | Score |
+|---|---|
+| Discoverability | 58.9 |
+| Contract quality | 39.0 |
+| Contract governance | 79.1 |
+| Operational transparency | 18.9 |
+| Developer ergonomics | 44.5 |
+| Access clarity | 34.2 |
+
+**Agent readiness 31.5** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | unknown |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | unknown |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/als-global/](https://apis.io/providers/als-global/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for ALS: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/als-global/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
